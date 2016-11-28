@@ -61,6 +61,7 @@ fieldset[disabled] .btn-dashunzi.active {
 
 .navbar-dashunzi .navbar-brand {
     color: #777;
+    height: 80px;
 }
 
 .navbar-dashunzi .navbar-brand:hover,
@@ -75,19 +76,23 @@ fieldset[disabled] .btn-dashunzi.active {
 
 .navbar-dashunzi .navbar-nav > li > a {
     color: #777;
+    line-height: 48px;
+    font-size: 14px;
 }
 
 .navbar-dashunzi .navbar-nav > li > a:hover,
 .navbar-dashunzi .navbar-nav > li > a:focus {
     color: #333;
     background-color: transparent;
+    border-bottom: 2px solid #E92322;
 }
 
 .navbar-dashunzi .navbar-nav > .active > a,
 .navbar-dashunzi .navbar-nav > .active > a:hover,
 .navbar-dashunzi .navbar-nav > .active > a:focus {
     color: #555;
-    background-color: #e7e7e7;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
 }
 
 .navbar-dashunzi .navbar-nav > .disabled > a,
@@ -239,13 +244,15 @@ body {
 
 #header .mobile-link > img {
     display: none;
-}
-
-#header .mobile-link:hover > img {
     position: absolute;
     left: 50%;
     top: 30px;
     margin-left: -60px;
+    z-index:1001;
+}
+
+#header .mobile-link:hover > img {
+
     display: block;
 }
 
@@ -260,6 +267,28 @@ body {
 
 #header .container .row div:nth-child(3) > a:hover, #header .container .row div .web-login:hover {
     text-decoration: none;
+}
+
+#header .icon-icon {
+
+    font-size: 50px;
+
+    color: #E92322;
+
+    line-height: 50px;
+
+    vertical-align: middle;
+}
+
+#header .icon-logo {
+
+    font-size: 32px;
+
+    color: #333;
+
+    line-height: 50px;
+
+    vertical-align: middle;
 }
 
 /*
