@@ -104,6 +104,8 @@ fieldset[disabled] .btn-dashunzi.active {
 
 .navbar-dashunzi .navbar-toggle {
     border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
 }
 
 .navbar-dashunzi .navbar-toggle:hover,
