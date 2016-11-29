@@ -57,6 +57,7 @@ fieldset[disabled] .btn-dashunzi.active {
 .navbar-dashunzi {
     background-color: #fff;
     border-color: #f5f5f5;
+    margin-bottom: 0;
 }
 
 .navbar-dashunzi .navbar-brand {
@@ -219,7 +220,7 @@ body {
     头部区域
 */
 #header {
-    height: 200px;
+
 }
 
 #header > .topbar {
@@ -250,7 +251,7 @@ body {
     left: 50%;
     top: 30px;
     margin-left: -60px;
-    z-index:1001;
+    z-index: 1001;
 }
 
 #header .mobile-link:hover > img {
@@ -293,17 +294,44 @@ body {
     vertical-align: middle;
 }
 
-/*
-    测试区域
-*/
-section {
-    height: 200px;
-    background-color: #fff;
+/*通栏广告轮播*/
+#main_ad {
+
 }
 
-section:nth-of-type(2n) {
-    /*选择到奇数的行*/
-    background-color: #f5f5f5;
+/*当屏幕大于768px的时候,让轮播图的高度为410px*/
+@media (min-width: 768px) {
+    #main_ad .carousel-inner .item {
+        height: 410px;
+    }
+}
+
+#main_ad .carousel-inner .item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#main_ad .carousel-inner .item > img {
+    width: 100%;
+}
+
+/*网站特色-feature*/
+#feature {
+    padding: 50px 0;
+}
+
+#feature .container .row div {
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.icon-uniE907:before {
+    content: "\e907";
+}
+
+#feature i {
+    font-size: 34px;
 }
 
 /*脚注区域*/
