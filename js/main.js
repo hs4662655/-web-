@@ -14,7 +14,6 @@ $(function () {
             var $element = $(element);
             //5.通过比较的屏幕大小，获取对应的图片
             var imageUrl = isSmallScreen ? $element.data('image-xs') : $element.data('image-lg');
-            console.log(imageUrl);
             //5.通过比较的大小给轮播图设置背景图片
             $element.css('backgroundImage', 'url("' + imageUrl + '")');
             //6.因为我们需要下屏幕时轮播图等比例缩放
