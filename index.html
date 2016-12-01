@@ -215,24 +215,29 @@
 <!--产品推荐-->
 <section id="products">
     <div class="container">
+        <!--要实现横向滚动条
+        1.要给ul加一个容器，这个容器有横向滚动条
+        2.动态设置ul的宽度，宽度是根据内容大小决定的-->
         <!--选项卡标题-->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#category_01" aria-controls="category_01" role="tab"
-                                                      data-toggle="tab" aria-expanded="false">特别推荐</a></li>
-            <li role="presentation"><a href="#category_02" aria-controls="category_02" role="tab" data-toggle="tab"
-                                       aria-expanded="true">微投资</a></li>
-            <li role="presentation"><a href="#category_03" aria-controls="category_03" role="tab" data-toggle="tab"
-                                       aria-expanded="false">微小宝</a></li>
-            <li role="presentation"><a href="#category_04" aria-controls="category_04" role="tab" data-toggle="tab"
-                                       aria-expanded="false">微消费</a></li>
-            <li role="presentation"><a href="#category_05" aria-controls="category_05" role="tab" data-toggle="tab"
-                                       aria-expanded="false">微增利</a></li>
-            <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab"
-                                       data-toggle="tab">微金宝</a></li>
-            <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab"
-                                       data-toggle="tab">微转让</a></li>
-            <li class="pull-right"><a href="#">更多</a></li>
-        </ul>
+        <div class="ul-wrapper">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#category_01" aria-controls="category_01" role="tab"
+                                                          data-toggle="tab" aria-expanded="false">特别推荐</a></li>
+                <li role="presentation"><a href="#category_02" aria-controls="category_02" role="tab" data-toggle="tab"
+                                           aria-expanded="true">微投资</a></li>
+                <li role="presentation"><a href="#category_03" aria-controls="category_03" role="tab" data-toggle="tab"
+                                           aria-expanded="false">微小宝</a></li>
+                <li role="presentation"><a href="#category_04" aria-controls="category_04" role="tab" data-toggle="tab"
+                                           aria-expanded="false">微消费</a></li>
+                <li role="presentation"><a href="#category_05" aria-controls="category_05" role="tab" data-toggle="tab"
+                                           aria-expanded="false">微增利</a></li>
+                <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab"
+                                           data-toggle="tab">微金宝</a></li>
+                <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab"
+                                           data-toggle="tab">微转让</a></li>
+                <li class="pull-right hidden-xs hidden-sm"><a href="#">更多</a></li>
+            </ul>
+        </div>
         <!-- Tab panes 选项卡内容-->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="category_01">
@@ -241,7 +246,12 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p class="products-nll">
+                                <p class="products-tooltip">
+                                    <a href="#" data-toggle="tooltip" data-placement="top"
+                                       title="北京欢迎你">京</a><a href="#" data-toggle="tooltip" data-placement="top"
+                                                             title="上海欢迎你">沪</a>
+                                </p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>
@@ -268,7 +278,7 @@
                         <div class="panel panel-dashunzi disabled">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>
@@ -295,7 +305,7 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>
@@ -322,7 +332,7 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>
@@ -349,7 +359,7 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>
@@ -376,7 +386,7 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p class="products-nll">年利率</p>
+                                <p>年利率</p>
                             </div>
                             <div class="panel-body">
                                 <h4>大顺子加油啊</h4>

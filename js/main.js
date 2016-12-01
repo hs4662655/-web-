@@ -19,11 +19,31 @@ $(function () {
             //6.因为我们需要下屏幕时轮播图等比例缩放
             if (isSmallScreen) {
                 $element.html('<img src="' + imageUrl + '"+alt="">');
-            }else{
+            } else {
                 $element.empty();
             }
         });
-    }
+        //初始化tooltip
+        $("[data-toggle='tooltip']").tooltip();
 
+        //设置产品推荐的横向滚动条
+        //1.首先动态获取ul下面所有的li
+        var $ulContainer = $('.nav-tabs');
+        var lisWidth = 50;
+        //2.循环遍历求li的宽度和
+        $ulContainer.children().each(function (index, element) {
+            lisWidth += element.clientWidth;
+        });
+        //当nav-tab的宽度大于屏幕的宽度时在设置宽度
+        if (lisWidth > $(window).width()) {
+            $ulContainer.css('width', lisWidth);
+            $('.ul-wrapper').css('overflow-x','scroll');
+        }else {
+            $ulContainer.css('width','100%');
+            $('.ul-wrapper').css('overflow-x','');
+        }
+    }
     $(window).on('resize', resize).trigger('resize');
+
+
 });
