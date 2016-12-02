@@ -37,13 +37,20 @@ $(function () {
         //当nav-tab的宽度大于屏幕的宽度时在设置宽度
         if (lisWidth > $(window).width()) {
             $ulContainer.css('width', lisWidth);
-            $('.ul-wrapper').css('overflow-x','scroll');
-        }else {
-            $ulContainer.css('width','100%');
-            $('.ul-wrapper').css('overflow-x','');
+            $('.ul-wrapper').css('overflow-x', 'scroll');
+        } else {
+            $ulContainer.css('width', '100%');
+            $('.ul-wrapper').css('overflow-x', '');
         }
     }
+
     $(window).on('resize', resize).trigger('resize');
 
-
+    var $newsTitle = $('.news-title');
+    //给新闻列表的a注册点击事件
+    $('#news .nav-pills a').on('click', function () {
+        var $this = $(this);
+        $newsTitle.text($this.data('title'));
+    });
+    ;
 });
