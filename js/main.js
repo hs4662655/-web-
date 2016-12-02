@@ -46,6 +46,35 @@ $(function () {
 
     $(window).on('resize', resize).trigger('resize');
 
+    //手机端用手指切换轮播图
+    //1.获取手指在轮播图元素上的一个滑动方向(左右)
+    //1.1手指触摸开始时记录一下手指所在的坐标X
+    //1.2结束触摸一瞬间记录最后的手指所在坐标X
+    //1.3比较大小
+    //获取界面上的轮播图容器
+    var $carousel = $('.carousel');
+    var startX, endX;
+    var offset = 50;
+    //注册滑动事件
+    $carousel.on('touchstart', function (e) {
+        //1.1手指触摸开始时记录一下手指所在的坐标X
+        startX = e.originalEvent.touches[0].clientX;
+        console.log(e);
+    });
+    $carousel.on('touchmove', function (e) {
+        //变量重复赋值
+        endX = e.originalEvent.touches[0].clientX;
+    });
+    $carousel.on('touchend', function (e) {
+        var distance = Math.abs(startX - endX);
+        if (distance > offset) {
+            $(this).carousel(startX > endX ? 'next' : 'prev');
+        }
+    });
+    //2.根据获得到的方向选择上一张或者下一张
+    //1.---$('a').click();
+    //2.---原生的carousel方法实现
+
     var $newsTitle = $('.news-title');
     //给新闻列表的a注册点击事件
     $('#news .nav-pills a').on('click', function () {

@@ -48,12 +48,12 @@
                 </div>
                 <div class="col-md-3 text-center">
                     <a href="#" class="btn btn-dashunzi btn-sm">免费注册</a>
-                    <a href="#" class="btn btn-link btn-sm web-login">登录</a>
+                    <a href="#" class="btn btn-link btn-sm web-login"  data-toggle="modal" data-target="#login_form">登录</a>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-dashunzi navbar-static-top">
+    <nav class="navbar navbar-dashunzi navbar-static-top" data-spy="affix" data-offset-top="40">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -246,7 +246,7 @@
                         <div class="panel panel-dashunzi actived">
                             <div class="panel-heading text-center">
                                 <p><span>8</span><sub>%</sub></p>
-                                <p>年利率</p class="products-nll">
+                                <p>年利率</p>
                                 <p class="products-tooltip">
                                     <a href="#" data-toggle="tooltip" data-placement="top"
                                        title="北京欢迎你">京</a><a href="#" data-toggle="tooltip" data-placement="top"
@@ -510,14 +510,72 @@
 </section>
 <!--新闻列表-->
 <!--/合作伙伴-->
-<section>
+<section id="hzhb" class="hidden-xs">
+    <div class="container text-center">
+        <h3>合作伙伴</h3>
+        <ul class="center-block">
+            <li><a href="#"><i class="icon-uniE930"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92F"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92E"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92A"></i></a></li>
+            <li><a href="#"><i class="icon-uniE929"></i></a></li>
+            <li><a href="#"><i class="icon-uniE931"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92C"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92B"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92D"></i></a></li>
+        </ul>
+    </div>
 </section>
 <!--/合作伙伴-->
 <!--脚注区域-->
 <footer id="footer"></footer>
 <!--脚注区域-->
-
-
+<!--模态框-->
+<!-- Modal -->
+<div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="login_form_title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="login_form_title">登录</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+          <!--  <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+        </div>
+    </div>
+</div>
 <!-- 建议将脚本的引入放入body的最底部-->
 <!--Bootstrap的所有组件都是依赖jquery的-->
 <script src="lib/jquery/jquery.js"></script>

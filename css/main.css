@@ -135,6 +135,8 @@ fieldset[disabled] .btn-dashunzi.active {
     background-color: #fff;
     border-color: #f5f5f5;
     margin-bottom: 0;
+    top: 0;
+    width: 100%;
 }
 
 .navbar-dashunzi .navbar-brand {
@@ -579,7 +581,7 @@ body {
 }
 
 #news .news-title {
-    border-bottom:1px dashed #c0c0c0;
+    border-bottom: 1px dashed #c0c0c0;
     text-align: center;
     font-size: 18px;
     margin-right: 10px;
@@ -587,9 +589,10 @@ body {
     font-weight: 400;
     padding: 15px;
 }
+
 #news .news-title::after {
-    content:' ';
-    width:10px;
+    content: ' ';
+    width: 10px;
     height: 10px;
     border-radius: 5px;
     position: absolute;
@@ -597,13 +600,114 @@ body {
     bottom: -5px;
     right: -10px;
 }
+
 @media (max-width: 768px) {
-    #news .nav-stacked li{
+    #news .nav-stacked li {
         margin-right: 20px;
         margin-top: 10px;
-        float:left;
+        float: left;
     }
 }
+
+/*合作伙伴*/
+#hzhb {
+    padding: 30px 0;
+}
+
+#hzhb ul {
+    padding: 0;
+    list-style: none;
+    width: 818px;
+}
+
+#hzhb ul li {
+    float: left;
+
+}
+
+#hzhb ul li + li {
+    border-left: 1px dashed #e0e0e0;
+}
+
+#hzhb ul li a {
+    font-size: 50px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #888;
+}
+
+.icon-uniE930:hover {
+    color: #df3232;
+}
+
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
+}
+
 /*脚注区域*/
 #footer {
     height: 200px;
